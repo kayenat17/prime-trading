@@ -1,0 +1,9 @@
+[
+  {
+    "time": "2025-06-20 22:41:18",
+    "type": "market",
+    "symbol": "BTCUSDT",
+    "side": "buy",
+    "result": "{\n  \"orderId\": 4572747413,\n  \"symbol\": \"BTCUSDT\",\n  \"status\": \"NEW\",\n  \"clientOrderId\": \"x-Cb7ytekJ72878074ad9f763eabf529\",\n  \"price\": \"0.00\",\n  \"avgPrice\": \"0.00\",\n  \"origQty\": \"1.000\",\n  \"executedQty\": \"0.000\",\n  \"cumQty\": \"0.000\",\n  \"cumQuote\": \"0.00000\",\n  \"timeInForce\": \"GTC\",\n  \"type\": \"MARKET\",\n  \"reduceOnly\": false,\n  \"closePosition\": false,\n  \"side\": \"BUY\",\n  \"positionSide\": \"BOTH\",\n  \"stopPrice\": \"0.00\",\n  \"workingType\": \"CONTRACT_PRICE\",\n  \"priceProtect\": false,\n  \"origType\": \"MARKET\",\n  \"priceMatch\": \"NONE\",\n  \"selfTradePreventionMode\": \"EXPIRE_MAKER\",\n  \"goodTillDate\": 0,\n  \"updateTime\": 1750439480478\n}"
+  }
+]

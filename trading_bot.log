@@ -1,0 +1,158 @@
+2025-06-20 20:14:29,859 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 20:15:05,603 - INFO - Placing MARKET order: buy 5.0 BTCSDT
+2025-06-20 20:15:05,902 - ERROR - Binance API Exception: APIError(code=-1121): Invalid symbol.
+2025-06-20 20:16:08,288 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 20:16:47,302 - INFO - Placing LIMIT order: buy 5.0 BTCUSDT @ 50.0
+2025-06-20 20:16:47,569 - ERROR - Binance API Exception: APIError(code=-4013): Price less than min price.
+2025-06-20 20:17:30,510 - INFO - Placing MARKET order: buy 2.0 BTCUSDT
+2025-06-20 20:17:30,688 - INFO - Order response: {'orderId': 4571509531, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ4afd4d0b965aa15804cde9', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '2.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750430851681}
+2025-06-20 20:24:53,284 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 20:24:53,533 - INFO - Order response: {'orderId': 4571619077, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJa5d680e615537e42c0dd96', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750431294529}
+2025-06-20 20:33:05,402 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 20:34:09,911 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 20:34:40,462 - INFO - Placing LIMIT order: buy 9.0 BTCUSDT @ 7000000.0
+2025-06-20 20:34:41,304 - ERROR - Binance API Exception: APIError(code=-2014): API-key format invalid.
+2025-06-20 20:39:20,705 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 20:40:17,882 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 20:40:44,073 - INFO - Placing MARKET order: buy 2.0 BTCUSDT
+2025-06-20 20:40:44,891 - ERROR - Binance API Exception: APIError(code=-2019): Margin is insufficient.
+2025-06-20 20:43:17,948 - INFO - Placing LIMIT order: sell 1.0 BTCUSDT @ 2.0
+2025-06-20 20:43:18,358 - ERROR - Binance API Exception: APIError(code=-4013): Price less than min price.
+2025-06-20 20:59:58,982 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:00:29,930 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 21:00:30,827 - INFO - Order response: {'orderId': 4572003177, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJdc906462b571451c042b09', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750433431722}
+2025-06-20 21:34:58,587 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:34:58,589 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 21:34:59,170 - ERROR - Binance API Exception: APIError(code=-1022): Signature for this request is not valid.
+2025-06-20 21:47:18,923 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:47:18,923 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:47:18,926 - INFO - Placing MARKET order: buy 1.0 wdfgvbnm
+2025-06-20 21:47:18,926 - INFO - Placing MARKET order: buy 1.0 wdfgvbnm
+2025-06-20 21:47:19,210 - ERROR - Binance API Exception: APIError(code=-2014): API-key format invalid.
+2025-06-20 21:47:19,210 - ERROR - Binance API Exception: APIError(code=-2014): API-key format invalid.
+2025-06-20 21:48:56,264 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:48:56,270 - INFO - Placing MARKET order: buy 1.0 wdfgvbnm
+2025-06-20 21:48:56,681 - ERROR - Binance API Exception: APIError(code=-2014): API-key format invalid.
+2025-06-20 21:49:15,557 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:49:15,557 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:49:15,560 - INFO - Placing MARKET order: buy 1.0 BTCUSDT
+2025-06-20 21:49:15,560 - INFO - Placing MARKET order: buy 1.0 BTCUSDT
+2025-06-20 21:49:16,031 - ERROR - Binance API Exception: APIError(code=-2014): API-key format invalid.
+2025-06-20 21:49:16,031 - ERROR - Binance API Exception: APIError(code=-2014): API-key format invalid.
+2025-06-20 21:50:28,405 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:50:28,405 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:50:28,405 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:50:28,405 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:50:28,412 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 21:50:28,412 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 21:50:28,412 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 21:50:28,412 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 21:50:28,710 - INFO - Order response: {'orderId': 4572371881, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ511ff4a1bfe991656464a4', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750436429731}
+2025-06-20 21:50:28,710 - INFO - Order response: {'orderId': 4572371881, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ511ff4a1bfe991656464a4', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750436429731}
+2025-06-20 21:50:28,710 - INFO - Order response: {'orderId': 4572371881, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ511ff4a1bfe991656464a4', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750436429731}
+2025-06-20 21:50:28,710 - INFO - Order response: {'orderId': 4572371881, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ511ff4a1bfe991656464a4', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750436429731}
+2025-06-20 21:54:15,261 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:54:15,261 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:54:15,261 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:54:15,261 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:54:15,261 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:54:15,267 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 21:54:15,267 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 21:54:15,267 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 21:54:15,267 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 21:54:15,267 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 21:54:15,700 - INFO - Order response: {'orderId': 4572401283, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJab70a559aba4f7aa867cab', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750436656660}
+2025-06-20 21:54:15,700 - INFO - Order response: {'orderId': 4572401283, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJab70a559aba4f7aa867cab', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750436656660}
+2025-06-20 21:54:15,700 - INFO - Order response: {'orderId': 4572401283, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJab70a559aba4f7aa867cab', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750436656660}
+2025-06-20 21:54:15,700 - INFO - Order response: {'orderId': 4572401283, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJab70a559aba4f7aa867cab', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750436656660}
+2025-06-20 21:54:15,700 - INFO - Order response: {'orderId': 4572401283, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJab70a559aba4f7aa867cab', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750436656660}
+2025-06-20 21:54:40,896 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:54:40,896 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:54:40,896 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:54:40,896 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:54:40,896 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:54:40,896 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 21:54:40,901 - INFO - Placing MARKET order: buy 6.0 BTCUSDT
+2025-06-20 21:54:40,901 - INFO - Placing MARKET order: buy 6.0 BTCUSDT
+2025-06-20 21:54:40,901 - INFO - Placing MARKET order: buy 6.0 BTCUSDT
+2025-06-20 21:54:40,901 - INFO - Placing MARKET order: buy 6.0 BTCUSDT
+2025-06-20 21:54:40,901 - INFO - Placing MARKET order: buy 6.0 BTCUSDT
+2025-06-20 21:54:40,901 - INFO - Placing MARKET order: buy 6.0 BTCUSDT
+2025-06-20 21:54:41,202 - ERROR - Binance API Exception: APIError(code=-2014): API-key format invalid.
+2025-06-20 21:54:41,202 - ERROR - Binance API Exception: APIError(code=-2014): API-key format invalid.
+2025-06-20 21:54:41,202 - ERROR - Binance API Exception: APIError(code=-2014): API-key format invalid.
+2025-06-20 21:54:41,202 - ERROR - Binance API Exception: APIError(code=-2014): API-key format invalid.
+2025-06-20 21:54:41,202 - ERROR - Binance API Exception: APIError(code=-2014): API-key format invalid.
+2025-06-20 21:54:41,202 - ERROR - Binance API Exception: APIError(code=-2014): API-key format invalid.
+2025-06-20 22:15:31,801 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:15:31,802 - INFO - Placing MARKET order: buy 8.0 BTCUSDT
+2025-06-20 22:15:32,037 - ERROR - Binance API Exception: APIError(code=-2014): API-key format invalid.
+2025-06-20 22:22:34,664 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:22:34,664 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:22:34,667 - INFO - Placing MARKET order: buy 4.0 BTCUSDT
+2025-06-20 22:22:34,667 - INFO - Placing MARKET order: buy 4.0 BTCUSDT
+2025-06-20 22:22:35,196 - ERROR - Binance API Exception: APIError(code=-2014): API-key format invalid.
+2025-06-20 22:22:35,196 - ERROR - Binance API Exception: APIError(code=-2014): API-key format invalid.
+2025-06-20 22:23:10,107 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:23:10,107 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:23:10,107 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:23:10,115 - INFO - Placing MARKET order: buy 1.0 BTCUSDT
+2025-06-20 22:23:10,115 - INFO - Placing MARKET order: buy 1.0 BTCUSDT
+2025-06-20 22:23:10,115 - INFO - Placing MARKET order: buy 1.0 BTCUSDT
+2025-06-20 22:23:10,670 - ERROR - Binance API Exception: APIError(code=-1022): Signature for this request is not valid.
+2025-06-20 22:23:10,670 - ERROR - Binance API Exception: APIError(code=-1022): Signature for this request is not valid.
+2025-06-20 22:23:10,670 - ERROR - Binance API Exception: APIError(code=-1022): Signature for this request is not valid.
+2025-06-20 22:23:43,383 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:23:43,383 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:23:43,383 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:23:43,383 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:23:43,389 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 22:23:43,389 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 22:23:43,389 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 22:23:43,389 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 22:23:43,959 - ERROR - Binance API Exception: APIError(code=-1022): Signature for this request is not valid.
+2025-06-20 22:23:43,959 - ERROR - Binance API Exception: APIError(code=-1022): Signature for this request is not valid.
+2025-06-20 22:23:43,959 - ERROR - Binance API Exception: APIError(code=-1022): Signature for this request is not valid.
+2025-06-20 22:23:43,959 - ERROR - Binance API Exception: APIError(code=-1022): Signature for this request is not valid.
+2025-06-20 22:29:53,703 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:29:53,703 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:29:53,703 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:29:53,703 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:29:53,703 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:29:53,708 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 22:29:53,708 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 22:29:53,708 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 22:29:53,708 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 22:29:53,708 - INFO - Placing MARKET order: sell 1.0 BTCUSDT
+2025-06-20 22:29:54,284 - ERROR - Binance API Exception: APIError(code=-2019): Margin is insufficient.
+2025-06-20 22:29:54,284 - ERROR - Binance API Exception: APIError(code=-2019): Margin is insufficient.
+2025-06-20 22:29:54,284 - ERROR - Binance API Exception: APIError(code=-2019): Margin is insufficient.
+2025-06-20 22:29:54,284 - ERROR - Binance API Exception: APIError(code=-2019): Margin is insufficient.
+2025-06-20 22:29:54,284 - ERROR - Binance API Exception: APIError(code=-2019): Margin is insufficient.
+2025-06-20 22:41:18,827 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:41:18,827 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:41:18,827 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:41:18,827 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:41:18,827 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:41:18,827 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:41:18,827 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:41:18,827 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:41:18,827 - INFO - Initialized BasicBot with testnet=True
+2025-06-20 22:41:18,832 - INFO - Placing MARKET order: buy 1.0 BTCUSDT
+2025-06-20 22:41:18,832 - INFO - Placing MARKET order: buy 1.0 BTCUSDT
+2025-06-20 22:41:18,832 - INFO - Placing MARKET order: buy 1.0 BTCUSDT
+2025-06-20 22:41:18,832 - INFO - Placing MARKET order: buy 1.0 BTCUSDT
+2025-06-20 22:41:18,832 - INFO - Placing MARKET order: buy 1.0 BTCUSDT
+2025-06-20 22:41:18,832 - INFO - Placing MARKET order: buy 1.0 BTCUSDT
+2025-06-20 22:41:18,832 - INFO - Placing MARKET order: buy 1.0 BTCUSDT
+2025-06-20 22:41:18,832 - INFO - Placing MARKET order: buy 1.0 BTCUSDT
+2025-06-20 22:41:18,832 - INFO - Placing MARKET order: buy 1.0 BTCUSDT
+2025-06-20 22:41:19,455 - INFO - Order response: {'orderId': 4572747413, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ72878074ad9f763eabf529', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750439480478}
+2025-06-20 22:41:19,455 - INFO - Order response: {'orderId': 4572747413, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ72878074ad9f763eabf529', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750439480478}
+2025-06-20 22:41:19,455 - INFO - Order response: {'orderId': 4572747413, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ72878074ad9f763eabf529', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750439480478}
+2025-06-20 22:41:19,455 - INFO - Order response: {'orderId': 4572747413, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ72878074ad9f763eabf529', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750439480478}
+2025-06-20 22:41:19,455 - INFO - Order response: {'orderId': 4572747413, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ72878074ad9f763eabf529', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750439480478}
+2025-06-20 22:41:19,455 - INFO - Order response: {'orderId': 4572747413, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ72878074ad9f763eabf529', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750439480478}
+2025-06-20 22:41:19,455 - INFO - Order response: {'orderId': 4572747413, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ72878074ad9f763eabf529', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750439480478}
+2025-06-20 22:41:19,455 - INFO - Order response: {'orderId': 4572747413, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ72878074ad9f763eabf529', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750439480478}
+2025-06-20 22:41:19,455 - INFO - Order response: {'orderId': 4572747413, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ72878074ad9f763eabf529', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '1.000', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1750439480478}

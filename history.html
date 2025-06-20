@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History - PrimeTrade Crypto Bot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/minty/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #7ad8b3 0%, #5adcb9 100%, #38a76a 200%);
+            min-height: 100vh;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+        .navbar {
+            margin-bottom: 0;
+            box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+            background: rgba(112, 180, 205, 0.95) !important;
+        }
+        .brand {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            color: #686857;
+            letter-spacing: 2px;
+        }
+        .hero {
+            text-align: center;
+            padding: 2.5rem 0 1.5rem 0;
+        }
+        .hero .logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
+        }
+        .hero-title {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            color: #686857;
+            font-size: 2.1rem;
+            margin-bottom: 0.2rem;
+        }
+        .hero-desc {
+            color: #4e5d6c;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .card-history {
+            background: #fff;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 1, 20, 0.13);
+            padding: 2rem 2rem 1.5rem 2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .table {
+            background: none;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+        .table th {
+            background: #e3fcec;
+            color: #3a7bd5;
+            font-weight: 600;
+            border: none;
+        }
+        .table-striped>tbody>tr:nth-of-type(odd) {
+            background-color: #f7fafc;
+        }
+        .table-striped>tbody>tr:nth-of-type(even) {
+            background-color: #eafaf3;
+        }
+        .table td, .table th {
+            vertical-align: middle;
+            border: none;
+        }
+        .alert {
+            margin-top: 1.5rem;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+            border: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand brand" href="/">Primetrade.ai Trading Bot</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Trade</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/history">Order History</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="hero">
+    <img src="{{ url_for('static', filename='6ES6Jaih_400x400.jpg') }}" alt="PrimeTrade Logo" class="logo">
+    <div class="hero-title">Order History</div>
+    <div class="hero-desc">View all your previous trades and their results</div>
+</div>
+<div class="container">
+    <div class="card-history">
+    {% if orders and orders|length > 0 %}
+    <div class="table-responsive">
+    <table class="table table-striped align-middle">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Type</th>
+                <th>Symbol</th>
+                <th>Side</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for order in orders|reverse %}
+            <tr>
+                <td>{{ order.time }}</td>
+                <td>{{ order.type }}</td>
+                <td>{{ order.symbol }}</td>
+                <td>{{ order.side }}</td>
+                <td><pre style="white-space: pre-wrap; word-break: break-all; background: none; border: none; margin: 0; padding: 0;">{{ order.result }}</pre></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    {% else %}
+    <div class="alert alert-info">No orders placed yet.</div>
+    {% endif %}
+    <a href="/" class="btn btn-primary mt-3">Back to Trading</a>
+    </div>
+</div>
+</body>
+</html> 

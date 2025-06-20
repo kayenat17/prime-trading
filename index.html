@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeTrade Crypto Bot</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Bootswatch Minty Theme for Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/minty/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+       
+        .bg-animated {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: 0;
+            background: linear-gradient(120deg, #1a2639 0%, #00bfae 100%, #1a2639 200%);
+            background-size: 200% 200%;
+            animation: gradientMove 12s ease-in-out infinite alternate;
+        }
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        /* Particle canvases */
+        #particles, #particles2 {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: 1;
+            pointer-events: none;
+        }
+        #particles2 {
+            z-index: 1;
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+        .navbar {
+            margin-bottom: 0;
+            box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+            background: #1a2639 !important;
+        }
+        .navbar .navbar-brand, .navbar .nav-link {
+            color: #fff !important;
+        }
+        .navbar .nav-link.active, .navbar .nav-link:focus, .navbar .nav-link:hover {
+            color: #00bfae !important;
+            font-weight: 700;
+        }
+        .brand {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            color: #bacdcb;
+            letter-spacing: 2px;
+        }
+        .logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            animation: bounce-in 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes bounce-in {
+            0% {
+                transform: scale(0.5) translateY(-100px);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.1) translateY(20px);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(0.95) translateY(-10px);
+            }
+            100% {
+                transform: scale(1) translateY(0);
+            }
+        }
+        .card {
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 1, 20, 0.2);
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fade-in-up 1s 0.3s forwards;
+        }
+        @keyframes fade-in-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .form-label {
+            font-weight: 500;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #00bfae 0%, #1a2639 100%);
+            border: none;
+            transition: box-shadow 0.3s, transform 0.2s;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #1a2639 0%, #00bfae 100%);
+            box-shadow: 0 4px 16px 0 rgba(0,191,174,0.25);
+            transform: scale(1.04) translateY(-2px);
+        }
+        .clear-btn {
+            margin-bottom: 1rem;
+            animation: fade-in-up 0.7s 0.7s backwards;
+        }
+        .alert {
+            animation: fade-in-up 0.7s 0.5s backwards;
+        }
+    </style>
+    <script>
+        function toggleAdvancedFields() {
+            var orderType = document.getElementById('order_type').value;
+            document.getElementById('limit_fields').style.display = (orderType === 'limit' || orderType === 'stop-limit') ? 'block' : 'none';
+            document.getElementById('stop_fields').style.display = (orderType === 'stop-limit') ? 'block' : 'none';
+            document.getElementById('twap_fields').style.display = (orderType === 'twap') ? 'block' : 'none';
+            document.getElementById('quantity_field').style.display = (orderType === 'twap') ? 'none' : 'block';
+        }
+        
+        window.onload = function() {
+            
+            var canvas = document.getElementById('particles');
+            if (canvas) {
+                var ctx = canvas.getContext('2d');
+                var w = window.innerWidth, h = window.innerHeight;
+                canvas.width = w; canvas.height = h;
+                var particles = [];
+                for (var i = 0; i < 40; i++) {
+                    particles.push({
+                        x: Math.random() * w,
+                        y: Math.random() * h,
+                        r: Math.random() * 2 + 1,
+                        d: Math.random() * 1 + 0.5,
+                        dx: (Math.random() - 0.5) * 0.5,
+                        dy: (Math.random() - 0.5) * 0.5
+                    });
+                }
+                function draw() {
+                    ctx.clearRect(0, 0, w, h);
+                    ctx.save();
+                    ctx.globalAlpha = 0.5;
+                    ctx.fillStyle = '#00bfae';
+                    particles.forEach(function(p) {
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI);
+                        ctx.fill();
+                    });
+                    ctx.restore();
+                }
+                function update() {
+                    particles.forEach(function(p) {
+                        p.x += p.dx;
+                        p.y += p.dy;
+                        if (p.x < 0 || p.x > w) p.dx *= -1;
+                        if (p.y < 0 || p.y > h) p.dy *= -1;
+                    });
+                }
+                function animate() {
+                    draw();
+                    update();
+                    requestAnimationFrame(animate);
+                }
+                animate();
+                window.onresize = function() {
+                    w = window.innerWidth; h = window.innerHeight;
+                    canvas.width = w; canvas.height = h;
+                };
+            }
+            
+            var canvas2 = document.getElementById('particles2');
+            if (canvas2) {
+                var ctx2 = canvas2.getContext('2d');
+                var w2 = window.innerWidth, h2 = window.innerHeight;
+                canvas2.width = w2; canvas2.height = h2;
+                var particles2 = [];
+                for (var i = 0; i < 18; i++) {
+                    particles2.push({
+                        x: Math.random() * w2,
+                        y: Math.random() * h2,
+                        r: Math.random() * 8 + 8,
+                        d: Math.random() * 0.3 + 0.1,
+                        dx: (Math.random() - 0.5) * 0.15,
+                        dy: (Math.random() - 0.5) * 0.15
+                    });
+                }
+                function draw2() {
+                    ctx2.clearRect(0, 0, w2, h2);
+                    ctx2.save();
+                    ctx2.globalAlpha = 0.18;
+                    ctx2.fillStyle = '#1a2639';
+                    particles2.forEach(function(p) {
+                        ctx2.beginPath();
+                        ctx2.arc(p.x, p.y, p.r, 0, 2 * Math.PI);
+                        ctx2.fill();
+                    });
+                    ctx2.restore();
+                }
+                function update2() {
+                    particles2.forEach(function(p) {
+                        p.x += p.dx;
+                        p.y += p.dy;
+                        if (p.x < 0 || p.x > w2) p.dx *= -1;
+                        if (p.y < 0 || p.y > h2) p.dy *= -1;
+                    });
+                }
+                function animate2() {
+                    draw2();
+                    update2();
+                    requestAnimationFrame(animate2);
+                }
+                animate2();
+                window.onresize = function() {
+                    w2 = window.innerWidth; h2 = window.innerHeight;
+                    canvas2.width = w2; canvas2.height = h2;
+                };
+            }
+        };
+    </script>
+</head>
+<body>
+<div class="bg-animated"></div>
+<canvas id="particles2"></canvas>
+<canvas id="particles"></canvas>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand brand" href="/">Primetrade.ai Trading Bot</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="/">Trade</a></li>
+        <li class="nav-item"><a class="nav-link" href="/history">Order History</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container py-5">
+    <div class="text-center mb-4">
+        <!-- Logo Placeholder -->
+        <img src="{{ url_for('static', filename='6ES6Jaih_400x400.jpg') }}" alt="PrimeTrade Logo" class="logo rounded-circle bg-white shadow-sm">
+        <h1 class="brand">Primetrade.ai Trading Bot</h1>
+        <p class="text-white-50">Trade smarter on Binance Futures Testnet</p>
+    </div>
+    {% if error or result %}
+      <form method="get" class="clear-btn text-end">
+        <button type="submit" class="btn btn-outline-secondary btn-sm">Clear Messages</button>
+      </form>
+    {% endif %}
+    {% if error %}
+      <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+    {% if result %}
+      <div class="alert alert-success"><strong>Order Result:</strong><pre>{{ result }}</pre></div>
+    {% endif %}
+    <form method="post" class="card p-4 bg-white shadow-sm mx-auto" style="max-width: 480px;">
+        <div class="row g-3">
+            <div class="col-12">
+                <label for="api_key" class="form-label">API Key</label>
+                <input type="password" class="form-control" id="api_key" name="api_key" required>
+            </div>
+            <div class="col-12">
+                <label for="api_secret" class="form-label">API Secret</label>
+                <input type="password" class="form-control" id="api_secret" name="api_secret" required>
+            </div>
+            <div class="col-md-6">
+                <label for="order_type" class="form-label">Order Type</label>
+                <select class="form-select" id="order_type" name="order_type" onchange="toggleAdvancedFields()" required>
+                    <option value="market">Market</option>
+                    <option value="limit">Limit</option>
+                    <option value="stop-limit">Stop-Limit</option>
+                    <option value="twap">TWAP</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="side" class="form-label">Side</label>
+                <select class="form-select" id="side" name="side" required>
+                    <option value="buy">Buy</option>
+                    <option value="sell">Sell</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <label for="symbol" class="form-label">Symbol (e.g., BTCUSDT)</label>
+                <input type="text" class="form-control" id="symbol" name="symbol" required>
+            </div>
+            <div class="col-12" id="quantity_field">
+                <label for="quantity" class="form-label">Quantity</label>
+                <input type="number" step="any" class="form-control" id="quantity" name="quantity">
+            </div>
+            <div class="col-12" id="limit_fields" style="display:none;">
+                <label for="price" class="form-label">Limit Price</label>
+                <input type="number" step="any" class="form-control" id="price" name="price">
+            </div>
+            <div class="col-12" id="stop_fields" style="display:none;">
+                <label for="stop_price" class="form-label">Stop Price</label>
+                <input type="number" step="any" class="form-control" id="stop_price" name="stop_price">
+            </div>
+            <div id="twap_fields" style="display:none;">
+                <div class="col-12">
+                    <label for="total_quantity" class="form-label">Total Quantity</label>
+                    <input type="number" step="any" class="form-control" id="total_quantity" name="total_quantity">
+                </div>
+                <div class="col-12">
+                    <label for="slices" class="form-label">Number of Slices</label>
+                    <input type="number" class="form-control" id="slices" name="slices">
+                </div>
+                <div class="col-12">
+                    <label for="interval_sec" class="form-label">Interval (seconds)</label>
+                    <input type="number" class="form-control" id="interval_sec" name="interval_sec">
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4 w-100">Place Order</button>
+    </form>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        toggleAdvancedFields();
+    });
+</script>
+</body>
+</html> 
